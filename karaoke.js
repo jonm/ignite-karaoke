@@ -83,7 +83,17 @@ var local_images = [
     "https://cdn0.wideopencountry.com/wp-content/uploads/2015/09/cow1-FEATURED-793x516.jpg",
     "https://memestatic.fjcdn.com/pictures/Silly+animal+pictures_6bbd26_6229985.jpg",
     "https://static.jeffbullas.com/wp-content/uploads/2015/04/How-to-Grow-an-Email-List-3-Case-Studies-on-How-Silly-Online-Quizzes-Produce-Serious-Business-Leads1.jpg",
-    
+    "https://www.thoughtco.com/thmb/jOkozEy57aMiecuw3dPrPALFQPQ=/798x734/filters:no_upscale():max_bytes(150000):strip_icc()/norman-58b8aa3b5f9b58af5c51f5ee.jpg",
+    "https://i.ytimg.com/vi/GHhFtkGfaWU/hqdefault.jpg",
+    "https://i.pinimg.com/originals/85/03/0d/85030dacda1b1f91b92ff77056b17648.jpg",
+    "https://www.thoughtco.com/thmb/NVdH2OxJFm83YXLAF0WS_FEaMxA=/767x640/filters:no_upscale():max_bytes(150000):strip_icc()/roughday-58b8aa1c5f9b58af5c51c9b0.png",
+    "http://www.dumpaday.com/wp-content/uploads/2013/01/funny-pretty-animals.jpg",
+    "https://vignette.wikia.nocookie.net/animaljam/images/3/30/Omg-funny-animals-dog-1.jpg/revision/latest?cb=20140719215428",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFLLegjy_vW6CooP-6wHiXAaKXGQOmFEchgI4CeRyki60NInb4Tg",
+    "http://cdn.icepop.com/wp-content/uploads/2018/02/pawsome-topix-com-7-Funny-animals.jpg",
+    "https://amazinganimalphotos.com/wp-content/uploads/2014/11/artist-animals-funny-memes.jpg",
+    "https://2.bp.blogspot.com/-Oz9tTxpw6Qk/WqLPVFXfLfI/AAAAAAAB41Q/Y2jyYo1QuhUstXG2Z3TZ06LOqRmys_sKwCLcBGAs/s1600/funny-animals-307-01.jpg",
+    "https://mmehappy.com/wp-content/uploads/2017/11/top-30-funny-animal-memes-and-quotes-hilarious.jpg"
 ];
 
 function pick5() {
