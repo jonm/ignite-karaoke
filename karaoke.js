@@ -31,7 +31,43 @@ var local_images = [
     "./imgs/pirate-mice.jpg",
     "./imgs/spout.jpg",
     "./imgs/bubblehead.jpg",
-    "./imgs/calisthenics.jpg"
+    "./imgs/calisthenics.jpg",
+    "https://i.ytimg.com/vi/daoTiDaCLg8/maxresdefault.jpg",
+    "https://static1.squarespace.com/static/57b31fb45016e16882ac0fc9/57d932fff7e0ab1129481fe3/5b92b7dd0ebbe83ee1a1c97e/1540902265645/TonyMarrese.jpg?format=2500w",
+    "https://pbs.twimg.com/profile_images/821849411991044096/lQFa_Vly_400x400.jpg",
+    "https://imgnooz.com/sites/default/files/wallpaper/animals/55900/funny-dog-wallpapers-55900-4496266.jpg",
+    "https://www.nationalgeographic.com/content/dam/animals/2018/09/comedy-wildlife-awards-photos/comedy-wildlife-awards-squirel-stop.ngsversion.1537203605960.adapt.1900.1.jpg",
+    "https://kids.nationalgeographic.com/content/dam/kids/photos/articles/Other%20Explore%20Photos/R-Z/Wacky%20Weekend/Funny%20Animal%20Faces/ww-funny-animal-faces-goat.adapt.945.1.jpg",
+    "https://worldwideinterweb.com/wp-content/uploads/2017/10/most-ridiculous-photo-ever-taken.jpg",
+    "https://hairstyleonpoint.com/wp-content/uploads/2017/03/horse-hair-ridiculous-haircuts.jpg",
+    "https://worldwideinterweb.com/wp-content/uploads/2017/10/ridiculous-photo-ever.jpg",
+    "https://rabbitroom.com/wp-content/uploads/2018/02/3044182-poster-p-1-ridiculous-by-design-where-designs-craziest-inventor-gets-his-ideas.gif.jpeg",
+    "https://assets.classicfm.com/2013/33/king-chicken-opera-1377248295.jpeg",
+    "https://bobcat.grahamdigital.com/83b806ce781a4c14f92a666000ecacf2f2fd99cd/crop-640x360-000.jpg",
+    "http://games.snimai.com/images/photos/top-10-most-ridiculous-and-dummy-photos-of-animals/thumbs/top-10-most-ridiculous-and-dummy-photos-of-animals-2.jpg",
+    "http://visionad.artefactdesign.com/wp-content/uploads/2017/07/The-Good-the-Bad-and-the-Ridiculous-Stock-Photos.jpg",
+    "https://yumnatarian.files.wordpress.com/2014/03/ridiculous-fashion-balloon.jpg",
+    "http://www.comediva.com/wp-content/uploads/2014/12/15-Ridiculous-Skymall-Products-What-on-Earth-Beard-Hat.png",
+    "https://www.dailydot.com/wp-content/uploads/2016/10/funny-ridiculous-halloween-costumes-centaur-280x400.png",
+    "https://i.ytimg.com/vi/aGSlt0CnFr4/hqdefault.jpg",
+    "https://66.media.tumblr.com/504abb90a59f169000fa21615c725f87/tumblr_inline_mfo94hDH2A1qiv1zz.jpg",
+    "https://i.pinimg.com/originals/0d/04/7a/0d047a0904ac5d7835b1899fd1bfa1e8.jpg",
+    "https://static.boredpanda.com/blog/wp-content/uploads/2018/03/ugly-medieval-cats-art-115-5aafbd8c8ffe9__700.jpg",
+    "https://waitbutwhy.com/wp-content/uploads/2013/07/FEATURE-2.png",
+    "https://memegenerator.net/img/images/2729805/willy-wonka.jpg",
+    "https://memegenerator.net/img/images/2485/the-most-interesting-man-in-the-world.jpg",
+    "https://memegenerator.net/img/images/84688/futurama-fry.jpg",
+    "https://memegenerator.net/img/images/1031/success-kid.jpg",
+    "https://memegenerator.net/img/images/6541210/grumpy-cat.jpg",
+    "https://memegenerator.net/img/images/42/joseph-ducreux.jpg",
+    "https://memegenerator.net/img/images/1232401/disaster-girl.jpg",
+    "https://memegenerator.net/img/images/2475876/koala-cant-believe-it.jpg",
+    "https://memegenerator.net/img/images/4290013/sudden-realization-ralph.jpg",
+    "https://memegenerator.net/img/images/627067/ancient-aliens.jpg",
+    "https://memegenerator.net/img/images/1119726/chemistry-cat.jpg",
+    "https://memegenerator.net/img/images/2606719/1889-10-guy.jpg",
+    "https://memegenerator.net/img/images/6881887/evil-toddler-kid2.jpg",
+    "https://memegenerator.net/img/images/1236/angry-arnold.jpg"
 ];
 
 function pick5() {
@@ -67,7 +103,7 @@ function showSplash() {
 
 function showSlide(urls) {
     if (urls.length == 0) {
-        location.reload();
+        showSplash();
         return;
     }
     var url = urls.pop();
@@ -84,7 +120,7 @@ function showSlide(urls) {
         $(".slide img").width(slideWidth);
     }
 
-    setTimeout(function() { showSlide(urls); }, 2000);
+    setTimeout(function() { showSlide(urls); }, 15000);
 }
 
 function launchIgnite() {
