@@ -67,21 +67,36 @@ var local_images = [
     "https://memegenerator.net/img/images/1119726/chemistry-cat.jpg",
     "https://memegenerator.net/img/images/2606719/1889-10-guy.jpg",
     "https://memegenerator.net/img/images/6881887/evil-toddler-kid2.jpg",
-    "https://memegenerator.net/img/images/1236/angry-arnold.jpg"
+    "https://memegenerator.net/img/images/1236/angry-arnold.jpg",
+    "https://cdn-images-1.medium.com/max/2000/1*kZ5haMH3Au_Y9xoSZScZjw.png",
+    "https://bfmbrainfall.files.wordpress.com/2016/04/how_silly_are_you_pomelo_cat.jpg?w=376",
+    "https://www.awesomeinventions.com/wp-content/uploads/2018/04/photoshop-man-riding-chicken-silly-things-bored-people-do.jpg",
+    "https://ministryofhappiness.files.wordpress.com/2014/06/19.jpg",
+    "https://i.imgur.com/EbJMP.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO2qc0lmuwkmxap4AOCsjSJwg4EQKA1mFfvxlgPWVax18RR8Db",
+    "http://www.mykidsite.com/wp-content/uploads/2013/03/Silly-Baby.jpg",
+    "https://si.wsj.net/public/resources/images/BN-QC226_bonds1_H_20161003175622.jpg",
+    "https://www.maxpixel.net/static/photo/1x/Love-Frog-Animal-Nature-Heart-Sculpture-Silly-3363217.jpg",
+    "https://sadanduseless.b-cdn.net/wp-content/uploads/2014/10/silly-dog-hat1.jpg",
+    "https://cdn0.wideopencountry.com/wp-content/uploads/2015/09/cow1-FEATURED-793x516.jpg",
+    "https://memestatic.fjcdn.com/pictures/Silly+animal+pictures_6bbd26_6229985.jpg",
+    "https://static.jeffbullas.com/wp-content/uploads/2015/04/How-to-Grow-an-Email-List-3-Case-Studies-on-How-Silly-Online-Quizzes-Produce-Serious-Business-Leads1.jpg",
+    
 ];
 
 function pick5() {
     var num_images = local_images.length;
+    var num_slides = 5;
     var indices = [];
     var urls = [];
-    for(var i=0; i<5; i++) {
+    for(var i=0; i<num_slides; i++) {
         var idx = Math.floor(Math.random() * num_images);
         while(indices.includes(idx) || idx >= num_images) {
             idx = Math.floor(Math.random() * num_images);
         };
         indices.push(idx);
     }
-    for(var j=0; j<5; j++) {
+    for(var j=0; j<num_slides; j++) {
         urls.push(local_images[indices[j]]);
     }
     return urls;
