@@ -21,6 +21,8 @@
  * SOFTWARE.
  */
 
+var slides_per_show = 5;
+var secs_per_slide = 15;
 var local_images = [
     "./imgs/contortionist.jpg",
     "./imgs/stormtroopers.jpg",
@@ -86,17 +88,16 @@ var local_images = [
 
 function pick5() {
     var num_images = local_images.length;
-    var num_slides = 5;
     var indices = [];
     var urls = [];
-    for(var i=0; i<num_slides; i++) {
+    for(var i=0; i<slides_per_show; i++) {
         var idx = Math.floor(Math.random() * num_images);
         while(indices.includes(idx) || idx >= num_images) {
             idx = Math.floor(Math.random() * num_images);
         };
         indices.push(idx);
     }
-    for(var j=0; j<num_slides; j++) {
+    for(var j=0; j<slides_per_show; j++) {
         urls.push(local_images[indices[j]]);
     }
     return urls;
@@ -125,8 +126,8 @@ function showSlide(urls) {
     $("#content").html("<div class='slide'><img src='" + url + "'/></div>");
     var imgWidth = $(".slide img").width();
     var imgHeight = $(".slide img").height();
-    var slideWidth = $(".slide").width();
-    var slideHeight = $(".slide").height();
+    var slideWidth = $(window).width();
+    var slideHeight = $(window).height();
     if (imgHeight >= imgWidth) {
         $(".slide img").addClass("portrait");
         $(".slide img").height(slideHeight);
@@ -135,7 +136,7 @@ function showSlide(urls) {
         $(".slide img").width(slideWidth);
     }
 
-    setTimeout(function() { showSlide(urls); }, 15000);
+    setTimeout(function() { showSlide(urls); }, secs_per_slide * 1000);
 }
 
 function launchIgnite() {
