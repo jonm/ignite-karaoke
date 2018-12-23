@@ -96,23 +96,17 @@ var local_images = [
     "https://mmehappy.com/wp-content/uploads/2017/11/top-30-funny-animal-memes-and-quotes-hilarious.jpg"
 ];
 
-function pick5() {
-    var num_images = local_images.length;
-    var indices = [];
-    var urls = [];
-    for(var i=0; i<slides_per_show; i++) {
-        var idx = Math.floor(Math.random() * num_images);
-        while(indices.includes(idx) || idx >= num_images) {
-            idx = Math.floor(Math.random() * num_images);
-        };
-        indices.push(idx);
+function shuffle(a) {
+    /* see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm */
+    var out = a.slice(), i, j, tmp;
+    for(i = a.length - 1; i>=1; i--) {
+        j = Math.floor(Math.random() * (i+1));
+        tmp = out[i];
+        out[i] = out[j];
+        out[j] = tmp;
     }
-    for(var j=0; j<slides_per_show; j++) {
-        urls.push(local_images[indices[j]]);
-    }
-    return urls;
+    return out;
 }
-
 
 function showSplash() {
     $("#content").html("<div class='container'>" +
@@ -149,8 +143,17 @@ function showSlide(urls) {
     setTimeout(function() { showSlide(urls); }, secs_per_slide * 1000);
 }
 
+var shuffled = [];
+
 function launchIgnite() {
-    showSlide(pick5());
+    if (shuffled.length < slides_per_show) {
+        shuffled = shuffle(local_images);
+    }
+    var slides = [];
+    for(var i=0; i<slides_per_show; i++) {
+        slides.push(shuffled.pop());
+    }
+    showSlide(slides);
 }
 
 showSplash();
