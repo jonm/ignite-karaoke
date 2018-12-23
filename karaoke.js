@@ -93,7 +93,19 @@ var local_images = [
     "http://cdn.icepop.com/wp-content/uploads/2018/02/pawsome-topix-com-7-Funny-animals.jpg",
     "https://amazinganimalphotos.com/wp-content/uploads/2014/11/artist-animals-funny-memes.jpg",
     "https://2.bp.blogspot.com/-Oz9tTxpw6Qk/WqLPVFXfLfI/AAAAAAAB41Q/Y2jyYo1QuhUstXG2Z3TZ06LOqRmys_sKwCLcBGAs/s1600/funny-animals-307-01.jpg",
-    "https://mmehappy.com/wp-content/uploads/2017/11/top-30-funny-animal-memes-and-quotes-hilarious.jpg"
+    "https://mmehappy.com/wp-content/uploads/2017/11/top-30-funny-animal-memes-and-quotes-hilarious.jpg",
+    "http://cdn.lifebuzz.com/images/86202/lifebuzz-8d2b1f29b2f91cf20b96db36e1f6f4fd-limit_2000.jpg",
+    "http://www.bunnyslippers.com/blog/wp-content/uploads/2014/03/funiest-dog.jpg",
+    "http://www.gyanibaba.in/wp-content/uploads/2015/09/lifebuzz-8fcbae170ed3616e7368c71e21320830-limit_2000.jpg",
+    "https://i.pinimg.com/originals/9d/de/28/9dde2866468e530e2b74a8ba132d3d43.jpg",
+    "http://wroops.com/wp-content/uploads/2017/10/3-25.jpg",
+    "https://i.imgur.com/zwph7mu.jpg",
+    "https://i.imgur.com/lRRvTg8.jpg",
+    "http://baddogneedsrottenhome.com/images/emails/536cc6d50764a.jpg",
+    "https://technabob.com/blog/wp-content/uploads/2010/06/stormtrooper_situations_3.jpg",
+    "https://technabob.com/blog/wp-content/uploads/2010/06/stormtrooper_situations_4.jpg",
+    "https://i.ytimg.com/vi/CJQC9GLyvYY/hqdefault.jpg",
+    "http://cdn.ebaumsworld.com/mediaFiles/picture/428737/1056255.jpg"
 ];
 
 function shuffle(a) {
