@@ -105,7 +105,9 @@ var local_images = [
     "https://technabob.com/blog/wp-content/uploads/2010/06/stormtrooper_situations_3.jpg",
     "https://technabob.com/blog/wp-content/uploads/2010/06/stormtrooper_situations_4.jpg",
     "https://i.ytimg.com/vi/CJQC9GLyvYY/hqdefault.jpg",
-    "http://cdn.ebaumsworld.com/mediaFiles/picture/428737/1056255.jpg"
+    "http://cdn.ebaumsworld.com/mediaFiles/picture/428737/1056255.jpg",
+    "https://oddstuffmagazine.com/wp-content/uploads/2018/01/robber-search-650x423.jpg",
+    "https://img.timesnownews.com/story/1540563742-funniest_halloween_costumes_2018.jpg?d=600x450"
 ];
 
 function shuffle(a) {
