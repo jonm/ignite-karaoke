@@ -107,7 +107,20 @@ var local_images = [
     "https://i.ytimg.com/vi/CJQC9GLyvYY/hqdefault.jpg",
     "http://cdn.ebaumsworld.com/mediaFiles/picture/428737/1056255.jpg",
     "https://oddstuffmagazine.com/wp-content/uploads/2018/01/robber-search-650x423.jpg",
-    "https://img.timesnownews.com/story/1540563742-funniest_halloween_costumes_2018.jpg?d=600x450"
+    "https://img.timesnownews.com/story/1540563742-funniest_halloween_costumes_2018.jpg?d=600x450",
+    "https://pbs.twimg.com/media/DqKHB36X0AAi56G.jpg",
+    "https://pbs.twimg.com/media/Dvk5DZBVsAA4AmI.jpg:large",
+    "https://pbs.twimg.com/media/DvadERmW0AAdp6U.jpg:large",
+    "https://pbs.twimg.com/media/DvZ2rMAUUAAWHMB.jpg:large",
+    "https://pbs.twimg.com/media/Dvh-XUFW0AErhWW.jpg:large",
+    "https://pbs.twimg.com/media/DvkjfBcV4AAm-sG.jpg:large",
+    "http://funnycomedianquotes.com/uploads/images/comedian/medium/will-ferrell.jpg",
+    "https://media.gq.com/photos/5582cc911177d66d68d593ae/master/w_800/entertainment-2013-06-50-funniest-things-the-web-ever-did-part-1-will-ferrell-hero-of-the-webs.jpg",
+    "https://ebonytamu.files.wordpress.com/2008/10/will-ferrell_l1.jpg?w=500",
+    "http://www.freakingnews.com/pictures/96000/Will-Ferrell-as-Julia-Child--96158.jpg",
+    "https://i1.wp.com/www.metdaan.com/wp-content/uploads/2018/01/Screenshot_12-5.png?fit=372%2C441",
+    "https://cdn.mos.cms.futurecdn.net/ba56d98fbf3a58abdea81d207b63a2e9.jpg",
+    "https://i2.wp.com/www.audienceseverywhere.net/wp-content/uploads/2015/12/Zoolander.jpg"
 ];
 
 function shuffle(a) {
