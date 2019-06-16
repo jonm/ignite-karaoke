@@ -37,7 +37,6 @@ var local_images = [
     "https://i.ytimg.com/vi/daoTiDaCLg8/maxresdefault.jpg",
     "https://static1.squarespace.com/static/57b31fb45016e16882ac0fc9/57d932fff7e0ab1129481fe3/5b92b7dd0ebbe83ee1a1c97e/1540902265645/TonyMarrese.jpg?format=2500w",
     "https://pbs.twimg.com/profile_images/821849411991044096/lQFa_Vly_400x400.jpg",
-    "https://imgnooz.com/sites/default/files/wallpaper/animals/55900/funny-dog-wallpapers-55900-4496266.jpg",
     "https://www.nationalgeographic.com/content/dam/animals/2018/09/comedy-wildlife-awards-photos/comedy-wildlife-awards-squirel-stop.ngsversion.1537203605960.adapt.1900.1.jpg",
     "https://kids.nationalgeographic.com/content/dam/kids/photos/articles/Other%20Explore%20Photos/R-Z/Wacky%20Weekend/Funny%20Animal%20Faces/ww-funny-animal-faces-goat.adapt.945.1.jpg",
     "https://worldwideinterweb.com/wp-content/uploads/2017/10/most-ridiculous-photo-ever-taken.jpg",
@@ -114,7 +113,8 @@ function showSplash() {
         "    haven't seen the slides before?</b>" +
         "  </p>" +
         "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite();'>Go!</a></p>" +
-        "</div></div>");
+        "</div></div>" +
+        "<div class='ignitelogo'></div>");
 };
 
 function showSlide(urls) {
@@ -123,7 +123,8 @@ function showSlide(urls) {
         return;
     }
     var url = urls.pop();
-    $("#content").html("<div class='slide'><img src='" + url + "'/></div>");
+    $("#content").html("<div class='slide'><img src='" + url + "'/></div>" +
+		"<div class='ignitelogo'></div>");
     var imgWidth = $(".slide img").width();
     var imgHeight = $(".slide img").height();
     var slideWidth = $(window).width();

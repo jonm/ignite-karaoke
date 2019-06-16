@@ -57,3 +57,13 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+.ignitelogo {
+	position: fixed;
+	width: 200px;
+	height: 200px;
+	top: calc(100% - 200px);
+	left: calc(100% - 250px);
+	z-index: 999;
+	background: url(https://upload.wikimedia.org/wikipedia/commons/e/e4/Ignite_Talks_Logo.png);
+	background-size: 200px 200px;
+}
