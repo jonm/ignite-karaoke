@@ -21,8 +21,9 @@
  * SOFTWARE.
  */
 
-var slides_per_show = 5;
-var secs_per_slide = 15;
+var slides_per_show = 3;
+var secs_per_slide = 5;
+var secs_per_introduction = 4;
 var local_images = [
     "./imgs/contortionist.jpg",
     "./imgs/stormtroopers.jpg",
@@ -122,6 +123,8 @@ var local_images = [
     "https://i2.wp.com/www.audienceseverywhere.net/wp-content/uploads/2015/12/Zoolander.jpg"
 ];
 
+var presenter_names = [];
+
 function shuffle(a) {
     /* see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm */
     var out = a.slice(), i, j, tmp;
@@ -144,13 +147,22 @@ function showSplash() {
         "    haven't seen the slides before?</b>" +
         "  </p>" +
         "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite();'>Go!</a></p>" +
+        "  <p><a class='btn btn-sm btn-info' href='#' role='button' onClick='showPresenters();'>Setup presenters</a></p>" +
         "</div></div>" +
         "<div class='ignitelogo'></div>");
 };
 
-function showSlide(urls) {
+/**
+ * Show randomly chosen slides.
+ * 
+ * @param {*} urls List of urls to pull images from.
+ * @param {*} returnToSplash Flag to return to splash screen after all urls are consumed.
+ */
+function showSlide(urls, returnToSplash) {
     if (urls.length == 0) {
-        showSplash();
+        if (returnToSplash) {
+            showSplash();
+        }
         return;
     }
     var url = urls.pop();
@@ -168,20 +180,104 @@ function showSlide(urls) {
         $(".slide img").width(slideWidth);
     }
 
-    setTimeout(function() { showSlide(urls); }, secs_per_slide * 1000);
+    setTimeout(function() { showSlide(urls, returnToSplash); }, secs_per_slide * 1000);
 }
 
 var shuffled = [];
 
 function launchIgnite() {
-    if (shuffled.length < slides_per_show) {
-        shuffled = shuffle(local_images);
+    var showSlides = function(returnToSplash) {
+        if (shuffled.length < slides_per_show) {
+            shuffled = shuffle(local_images);
+        }
+        var slides = [];
+        for(var i=0; i<slides_per_show; i++) {
+            slides.push(shuffled.pop());
+        }
+        showSlide(slides, returnToSplash);
+    };
+
+    if (presenter_names.length == 0) {
+        showSlides(true);
+    } else {
+        showPresenterSlides(presenter_names, showSlides);
     }
-    var slides = [];
-    for(var i=0; i<slides_per_show; i++) {
-        slides.push(shuffled.pop());
+};
+
+function showPresenterSlides(names, showSlideFn) {
+    if (names.length == 0) {
+        showSplash();
+        return;
     }
-    showSlide(slides);
+    var currentPresenter = names.shift();
+    introducePresenter(currentPresenter);
+    
+    // Display countdown
+    for(let i=1; i<=secs_per_introduction; i++) {
+        setTimeout(function(){ $("#countdown").text(i); }, (secs_per_introduction - i) * 1000)
+    }
+
+    setTimeout(function() { showSlideFn(false); }, secs_per_introduction * 1000);
+    setTimeout(function() { showPresenterSlides(names, showSlideFn); }, (secs_per_introduction + (slides_per_show * secs_per_slide)) * 1000);
+};
+
+function introducePresenter(name) {
+    $("#content").html("<div class='container'>" +
+    "  <div class='jumbotron'>" +
+    "    <h1>Ignite Karaoke</h1>" +
+    "    <div id='countdown'></div>" +
+    "    <br/>" +
+    "    <h2>Next up:</h2>" +
+    "    <h2>" + name + "</h2>" +
+    "  </div>" +
+    "</div" +
+    "<div class='ignitelogo'></div>");
+};
+
+function showPresenters() {
+    $("#content").html(
+        "<div class='container'>" +
+        "  <div class='jumbotron'>" +
+        "    <h1>Ignite Karaoke</h1>" +
+        "    <table id='presenter-table' class='table text-center'>" +
+        "      <th class='text-center'><u><h2>Presenters</h2></u></th> " +
+        "    </table>" +
+        "    <br/>" +
+        "    <p>" +
+        "      <input id='presenter-input' type='text'></input>" +
+        "      &nbsp;" +
+        "      <button onClick='addPresenter()'>Add presenter</button>" +
+        "    </p>" +
+        "    <button onClick='showSplash()'>&#8678;</button>" +
+        "  </div>" +
+        "</div>" +
+        "<div class='ignitelogo'></div>");
+
+    for(var i=0; i<presenter_names.length; i++) {
+        $("#presenter-table").append(
+        "<tr>" +
+        "  <td>" +
+             presenter_names[i] +
+        "    <button onClick='removePresenter(" +  i + ")'><span aria-hidden='true'>&times;</span></button>" +
+        "  </td>" +
+        "</tr>"
+        );
+    }
+}
+
+function addPresenter() {
+    var inputText = $("#presenter-input").val().trim();
+    if (inputText.length > 0) {
+        presenter_names.push(inputText);
+        showPresenters();
+    } else {
+        alert("Cannot add a blank presenter!");
+    }
+}
+
+function removePresenter(index) {
+    presenter_names.splice(index, 1);
+    showPresenters();
 }
 
 showSplash();
