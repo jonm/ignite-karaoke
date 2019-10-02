@@ -21,9 +21,9 @@
  * SOFTWARE.
  */
 
-var slides_per_show = 3;
-var secs_per_slide = 5;
-var secs_per_introduction = 4;
+var slides_per_show = 5;
+var secs_per_slide = 15;
+var secs_per_introduction = 3;
 var local_images = [
     "./imgs/contortionist.jpg",
     "./imgs/stormtroopers.jpg",
@@ -225,10 +225,11 @@ function introducePresenter(name) {
     $("#content").html("<div class='container'>" +
     "  <div class='jumbotron'>" +
     "    <h1>Ignite Karaoke</h1>" +
-    "    <div id='countdown'></div>" +
     "    <br/>" +
-    "    <h2>Next up:</h2>" +
+    "    <p>Next up:</p>" +
     "    <h2>" + name + "</h2>" +
+    "    <br>" +
+    "    <span style='font-size:140%' id='countdown'></span>" +
     "  </div>" +
     "</div" +
     "<div class='ignitelogo'></div>");
@@ -240,13 +241,13 @@ function showPresenters() {
         "  <div class='jumbotron'>" +
         "    <h1>Ignite Karaoke</h1>" +
         "    <table id='presenter-table' class='table text-center'>" +
-        "      <th class='text-center'><u><h2>Presenters</h2></u></th> " +
+        "      <th style='border-top: none;' class='text-center'><u><h2>Presenters</h2></u></th> " +
         "    </table>" +
         "    <br/>" +
         "    <p>" +
         "      <input id='presenter-input' type='text'></input>" +
         "      &nbsp;" +
-        "      <button onClick='addPresenter()'>Add presenter</button>" +
+        "      <button class='btn-sm btn-info' onClick='addPresenter()'><span style='font-size:125%'><b>&plus;</b></span></button>" +
         "    </p>" +
         "    <button onClick='showSplash()'>&#8678;</button>" +
         "  </div>" +
@@ -256,9 +257,9 @@ function showPresenters() {
     for(var i=0; i<presenter_names.length; i++) {
         $("#presenter-table").append(
         "<tr>" +
-        "  <td>" +
+        "  <td style='border-top: none; border-bottom: none;'>" +
              presenter_names[i] +
-        "    <button onClick='removePresenter(" +  i + ")'><span aria-hidden='true'>&times;</span></button>" +
+        "    <button style='background-color: transparent; outline: none; border: none;' onClick='removePresenter(" +  i + ")'><span style='color:red' >&times;</span></button>" +
         "  </td>" +
         "</tr>"
         );
