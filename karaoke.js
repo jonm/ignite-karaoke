@@ -119,7 +119,18 @@ var local_images = [
     "http://www.freakingnews.com/pictures/96000/Will-Ferrell-as-Julia-Child--96158.jpg",
     "https://i1.wp.com/www.metdaan.com/wp-content/uploads/2018/01/Screenshot_12-5.png?fit=372%2C441",
     "https://cdn.mos.cms.futurecdn.net/ba56d98fbf3a58abdea81d207b63a2e9.jpg",
-    "https://i2.wp.com/www.audienceseverywhere.net/wp-content/uploads/2015/12/Zoolander.jpg"
+    "https://i2.wp.com/www.audienceseverywhere.net/wp-content/uploads/2015/12/Zoolander.jpg",
+    "https://cdn.pixabay.com/photo/2017/04/18/23/35/frog-2240764_1280.jpg",
+    "https://cdn.pixabay.com/photo/2014/11/23/10/49/rabbit-542554_1280.jpg",
+    "https://cdn.pixabay.com/photo/2014/08/08/20/54/laundry-413688_1280.jpg",
+    "https://images.unsplash.com/photo-1433162653888-a571db5ccccf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "https://images.unsplash.com/photo-1534375971785-5c1826f739d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&auto=format&fit=crop&w=2009&q=80",
+    "https://images.unsplash.com/photo-1542712880-f6abcf9be339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2394&q=80",
+    "https://images.unsplash.com/photo-1487744019449-309d7c78014f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80",
+    "https://cdn.pixabay.com/photo/2014/09/11/18/36/witch-prohibition-441868_1280.jpg",
+    "https://c.pxhere.com/photos/89/e7/hammock_height_courageous_courage_crazy_no_fear_of_heights_big_city_skyscrapers-1191440.jpg!d",
+    "https://upload.wikimedia.org/wikipedia/commons/a/a5/Funny_Faces_Helsinki_%28230100743%29.jpeg"
 ];
 
 function shuffle(a) {
