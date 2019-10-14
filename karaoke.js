@@ -138,7 +138,6 @@ var local_images = [
 function setKeyDownEvent() {
 	document.onkeydown = function(e) {
 		if( keys_to_begin.includes(e.keyCode) && slides.length == 0 ) {
-			alert( slides.length );
 			launchIgnite();
 		}
 	}
