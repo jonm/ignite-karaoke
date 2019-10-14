@@ -22,7 +22,7 @@
  */
 
 var keys_to_begin = [13, 27, 33, 34]; // Keys: Keyboard Return, Clicker Play, Clicker Left, Clicker Right
-var urls = [];
+var slides = [];
 var slides_per_show = 5;
 var secs_per_slide = 15;
 var local_images = [
@@ -137,27 +137,12 @@ var local_images = [
 
 function setKeyDownEvent() {
 	document.onkeydown = function(e) {
-		if( keys_to_begin.includes(e.keyCode) && urls.length == 0 ) {
+		if( keys_to_begin.includes(e.keyCode) && slides.length == 0 ) {
+			alert( slides.length );
 			launchIgnite();
 		}
 	}
 };
-
-function pick5() {
-    var num_images = local_images.length;
-    var indices = [];
-    for(var i=0; i<slides_per_show; i++) {
-        var idx = Math.floor(Math.random() * num_images);
-        while(indices.includes(idx) || idx >= num_images) {
-            idx = Math.floor(Math.random() * num_images);
-        };
-        indices.push(idx);
-    }
-    for(var j=0; j<slides_per_show; j++) {
-        urls.push(local_images[indices[j]]);
-    }
-    return out;
-}
 
 function shuffle(a) {
     /* see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm */
@@ -214,7 +199,6 @@ function launchIgnite() {
     if (shuffled.length < slides_per_show) {
         shuffled = shuffle(local_images);
     }
-    var slides = [];
     for(var i=0; i<slides_per_show; i++) {
         slides.push(shuffled.pop());
     }
