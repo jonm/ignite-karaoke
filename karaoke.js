@@ -84,9 +84,58 @@ var local_images = [
     "https://cdn0.wideopencountry.com/wp-content/uploads/2015/09/cow1-FEATURED-793x516.jpg",
     "https://memestatic.fjcdn.com/pictures/Silly+animal+pictures_6bbd26_6229985.jpg",
     "https://static.jeffbullas.com/wp-content/uploads/2015/04/How-to-Grow-an-Email-List-3-Case-Studies-on-How-Silly-Online-Quizzes-Produce-Serious-Business-Leads1.jpg",
-    
+    "https://www.thoughtco.com/thmb/jOkozEy57aMiecuw3dPrPALFQPQ=/798x734/filters:no_upscale():max_bytes(150000):strip_icc()/norman-58b8aa3b5f9b58af5c51f5ee.jpg",
+    "https://i.ytimg.com/vi/GHhFtkGfaWU/hqdefault.jpg",
+    "https://i.pinimg.com/originals/85/03/0d/85030dacda1b1f91b92ff77056b17648.jpg",
+    "https://www.thoughtco.com/thmb/NVdH2OxJFm83YXLAF0WS_FEaMxA=/767x640/filters:no_upscale():max_bytes(150000):strip_icc()/roughday-58b8aa1c5f9b58af5c51c9b0.png",
+    "http://www.dumpaday.com/wp-content/uploads/2013/01/funny-pretty-animals.jpg",
+    "https://vignette.wikia.nocookie.net/animaljam/images/3/30/Omg-funny-animals-dog-1.jpg/revision/latest?cb=20140719215428",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFLLegjy_vW6CooP-6wHiXAaKXGQOmFEchgI4CeRyki60NInb4Tg",
+    "http://cdn.icepop.com/wp-content/uploads/2018/02/pawsome-topix-com-7-Funny-animals.jpg",
+    "https://amazinganimalphotos.com/wp-content/uploads/2014/11/artist-animals-funny-memes.jpg",
+    "https://2.bp.blogspot.com/-Oz9tTxpw6Qk/WqLPVFXfLfI/AAAAAAAB41Q/Y2jyYo1QuhUstXG2Z3TZ06LOqRmys_sKwCLcBGAs/s1600/funny-animals-307-01.jpg",
+    "https://mmehappy.com/wp-content/uploads/2017/11/top-30-funny-animal-memes-and-quotes-hilarious.jpg",
+    "http://cdn.lifebuzz.com/images/86202/lifebuzz-8d2b1f29b2f91cf20b96db36e1f6f4fd-limit_2000.jpg",
+    "http://www.bunnyslippers.com/blog/wp-content/uploads/2014/03/funiest-dog.jpg",
+    "http://www.gyanibaba.in/wp-content/uploads/2015/09/lifebuzz-8fcbae170ed3616e7368c71e21320830-limit_2000.jpg",
+    "https://i.pinimg.com/originals/9d/de/28/9dde2866468e530e2b74a8ba132d3d43.jpg",
+    "http://wroops.com/wp-content/uploads/2017/10/3-25.jpg",
+    "https://i.imgur.com/zwph7mu.jpg",
+    "https://i.imgur.com/lRRvTg8.jpg",
+    "http://baddogneedsrottenhome.com/images/emails/536cc6d50764a.jpg",
+    "https://technabob.com/blog/wp-content/uploads/2010/06/stormtrooper_situations_3.jpg",
+    "https://technabob.com/blog/wp-content/uploads/2010/06/stormtrooper_situations_4.jpg",
+    "https://i.ytimg.com/vi/CJQC9GLyvYY/hqdefault.jpg",
+    "http://cdn.ebaumsworld.com/mediaFiles/picture/428737/1056255.jpg",
+    "https://oddstuffmagazine.com/wp-content/uploads/2018/01/robber-search-650x423.jpg",
+    "https://img.timesnownews.com/story/1540563742-funniest_halloween_costumes_2018.jpg?d=600x450",
+    "https://pbs.twimg.com/media/DqKHB36X0AAi56G.jpg",
+    "https://pbs.twimg.com/media/Dvk5DZBVsAA4AmI.jpg:large",
+    "https://pbs.twimg.com/media/DvadERmW0AAdp6U.jpg:large",
+    "https://pbs.twimg.com/media/DvZ2rMAUUAAWHMB.jpg:large",
+    "https://pbs.twimg.com/media/Dvh-XUFW0AErhWW.jpg:large",
+    "https://pbs.twimg.com/media/DvkjfBcV4AAm-sG.jpg:large",
+    "http://funnycomedianquotes.com/uploads/images/comedian/medium/will-ferrell.jpg",
+    "https://media.gq.com/photos/5582cc911177d66d68d593ae/master/w_800/entertainment-2013-06-50-funniest-things-the-web-ever-did-part-1-will-ferrell-hero-of-the-webs.jpg",
+    "https://ebonytamu.files.wordpress.com/2008/10/will-ferrell_l1.jpg?w=500",
+    "http://www.freakingnews.com/pictures/96000/Will-Ferrell-as-Julia-Child--96158.jpg",
+    "https://i1.wp.com/www.metdaan.com/wp-content/uploads/2018/01/Screenshot_12-5.png?fit=372%2C441",
+    "https://cdn.mos.cms.futurecdn.net/ba56d98fbf3a58abdea81d207b63a2e9.jpg",
+    "https://i2.wp.com/www.audienceseverywhere.net/wp-content/uploads/2015/12/Zoolander.jpg",
+    "https://cdn.pixabay.com/photo/2017/04/18/23/35/frog-2240764_1280.jpg",
+    "https://cdn.pixabay.com/photo/2014/11/23/10/49/rabbit-542554_1280.jpg",
+    "https://cdn.pixabay.com/photo/2014/08/08/20/54/laundry-413688_1280.jpg",
+    "https://images.unsplash.com/photo-1433162653888-a571db5ccccf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "https://images.unsplash.com/photo-1534375971785-5c1826f739d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&auto=format&fit=crop&w=2009&q=80",
+    "https://images.unsplash.com/photo-1542712880-f6abcf9be339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2394&q=80",
+    "https://images.unsplash.com/photo-1487744019449-309d7c78014f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80",
+    "https://cdn.pixabay.com/photo/2014/09/11/18/36/witch-prohibition-441868_1280.jpg",
+    "https://c.pxhere.com/photos/89/e7/hammock_height_courageous_courage_crazy_no_fear_of_heights_big_city_skyscrapers-1191440.jpg!d",
+    "https://upload.wikimedia.org/wikipedia/commons/a/a5/Funny_Faces_Helsinki_%28230100743%29.jpeg"
 ];
 
+<<<<<<< HEAD
 function setKeyDownEvent() {
 	document.onkeydown = function(e) {
 		if( keys_to_begin.includes(e.keyCode) && urls.length == 0 ) {
@@ -107,8 +156,18 @@ function pick5() {
     }
     for(var j=0; j<slides_per_show; j++) {
         urls.push(local_images[indices[j]]);
+=======
+function shuffle(a) {
+    /* see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm */
+    var out = a.slice(), i, j, tmp;
+    for(i = a.length - 1; i>=1; i--) {
+        j = Math.floor(Math.random() * (i+1));
+        tmp = out[i];
+        out[i] = out[j];
+        out[j] = tmp;
+>>>>>>> aaaf9830768ed11b58ffa026d85382300f0e8aeb
     }
-    return urls;
+    return out;
 }
 
 function showSplash() {
@@ -148,8 +207,17 @@ function showSlide(urls) {
     setTimeout(function() { showSlide(urls); }, secs_per_slide * 1000);
 }
 
+var shuffled = [];
+
 function launchIgnite() {
-    showSlide(pick5());
+    if (shuffled.length < slides_per_show) {
+        shuffled = shuffle(local_images);
+    }
+    var slides = [];
+    for(var i=0; i<slides_per_show; i++) {
+        slides.push(shuffled.pop());
+    }
+    showSlide(slides);
 }
 
 showSplash();
