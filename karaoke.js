@@ -135,7 +135,6 @@ var local_images = [
     "https://upload.wikimedia.org/wikipedia/commons/a/a5/Funny_Faces_Helsinki_%28230100743%29.jpeg"
 ];
 
-<<<<<<< HEAD
 function setKeyDownEvent() {
 	document.onkeydown = function(e) {
 		if( keys_to_begin.includes(e.keyCode) && urls.length == 0 ) {
@@ -156,7 +155,10 @@ function pick5() {
     }
     for(var j=0; j<slides_per_show; j++) {
         urls.push(local_images[indices[j]]);
-=======
+    }
+    return out;
+}
+
 function shuffle(a) {
     /* see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm */
     var out = a.slice(), i, j, tmp;
@@ -165,7 +167,6 @@ function shuffle(a) {
         tmp = out[i];
         out[i] = out[j];
         out[j] = tmp;
->>>>>>> aaaf9830768ed11b58ffa026d85382300f0e8aeb
     }
     return out;
 }
