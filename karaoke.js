@@ -22,11 +22,12 @@
  */
 
 var keys_to_begin = [13, 27, 33, 34]; // Keys: Keyboard Return, Clicker Play, Clicker Left, Clicker Right
+var topics = ['random', 'jayz', 'cats'];
 var slides = [];
 var slides_per_show = 5;
 var secs_per_slide = 15;
 
-var local_images = jayz_images;
+var local_images = window["jayz_images"];
 
 
 function setKeyDownEvent() {
@@ -58,7 +59,10 @@ function showSplash() {
         "    15 seconds. Can you give a 5-slide Ignite talk <b>when you "+
         "    haven't seen the slides before?</b>" +
         "  </p>" +
-        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite();'>Go!</a></p>" +
+        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"random\");'>Go!</a></p>" +
+        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"jayz\");'>Jay-Z</a></p>" +
+        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"cats\");'>Cats!</a></p>" +
+        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"baseball\");'>Baseball!</a></p>" +
         "</div></div>" +
         "<div class='ignitelogo'></div>");
 };
@@ -88,9 +92,9 @@ function showSlide(urls) {
 
 var shuffled = [];
 
-function launchIgnite() {
+function launchIgnite(theme) {
     if (shuffled.length < slides_per_show) {
-        shuffled = shuffle(local_images);
+        shuffled = shuffle(window[theme + "_images"]);
     }
     for(var i=0; i<slides_per_show; i++) {
         slides.push(shuffled.pop());
