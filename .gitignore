@@ -1,2 +1,4 @@
 *~
 .ssh/
+venv/
+__pycache__

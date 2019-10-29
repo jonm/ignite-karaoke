@@ -1,10 +1,9 @@
 # Ignite Karaoke
 
 To get started, just clone this repository and then open `karaoke.html`
-in your browser. Have fun!
+in your browser. Have fun! Also being served at https://karaoke.jonm.dev/ !
 
-If you want to add photos, just add their URLs to the `local_images`
-variable in `karaoke.js`!
+If you want to add photos, just add their URLs to the `images.js` file!
 
 ## What is it?
 
@@ -19,4 +18,16 @@ like! It leads to some pretty funny improv.
 I first saw Ignite Karaoke at a Velocity conference. For an example, see:
 https://www.youtube.com/watch?v=6rnVqMa61hw
 
+## Developing
 
+This is a pretty plain-vanilla static site (HTML, CSS, JS).
+
+If you want to run the tests that check for broken links, you'll need
+Python 3 and `virtualenv`.
+
+```
+$ virtualenv -p python3 venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ python -m pytest
+```
