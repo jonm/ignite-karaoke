@@ -22,7 +22,7 @@
  */
 
 var slides_per_show = 5;
-var secs_per_slide = 12;
+var secs_per_slide = 5;
 
 function shuffle(a) {
     /* see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm */
@@ -63,11 +63,21 @@ function showSlide(urls) {
     var slideWidth = $(window).width();
     var slideHeight = $(window).height();
     if (imgHeight >= imgWidth) {
-        $(".slide img").addClass("portrait");
-        $(".slide img").height(slideHeight);
+        if (slideHeight / imgHeight * imgWidth >= slideWidth) {
+            $(".slide img").addClass("landscape");
+            $(".slide img").width(slideWidth);
+        } else {
+            $(".slide img").addClass("portrait");
+            $(".slide img").height(slideHeight);
+        }
     } else {
-        $(".slide img").addClass("landscape");
-        $(".slide img").width(slideWidth);
+        if (slideWidth / imgWidth * imgHeight >= slideHeight) {
+            $(".slide img").addClass("portrait");
+            $(".slide img").height(slideHeight);
+        } else {
+            $(".slide img").addClass("landscape");
+            $(".slide img").width(slideWidth);
+        }
     }
 
     setTimeout(function() { showSlide(urls); }, secs_per_slide * 1000);
