@@ -57,8 +57,7 @@ function showSlide(urls) {
         return;
     }
     var url = urls.pop();
-    $("#content").html("<div class='slide'><img src='" + url + "'/></div>" +
-		"<div class='ignitelogo'></div>");
+    $("#content").html("<div class='slide'><img src='" + url + "'/></div>");
     var imgWidth = $(".slide img").width();
     var imgHeight = $(".slide img").height();
     var slideWidth = $(window).width();
@@ -87,5 +86,23 @@ function launchIgnite() {
     showSlide(slides);
 }
 
+function brokenImage(elt) {
+    console.log("Pruning " + elt.src);
+    local_images = local_images.filter(function (value, index, arr) {
+        return value != elt.src;
+    });
+}
+
+function preloadImage(url) {
+    $("#image_preload").append("<img src=\"" + url + "\"/ onError=\"brokenImage(this);\">");
+}
+
+function checkImages() {
+    for(var i=0; i<local_images.length; i++) {
+        preloadImage(local_images[i]);
+    }
+}
+
+checkImages();
 showSplash();
 
