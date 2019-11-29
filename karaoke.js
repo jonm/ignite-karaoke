@@ -22,7 +22,7 @@
  */
 
 var slides_per_show = 5;
-var secs_per_slide = 5;
+var secs_per_slide = 12;
 
 function shuffle(a) {
     /* see https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm */
