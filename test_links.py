@@ -13,11 +13,15 @@ def test_links():
     for link in links:
         if link.startswith("./"): continue # local images
         print(link, " ... ", end = "")
-        resp = requests.head(link)
-        if resp.status_code == http.HTTPStatus.OK:
-            print("OK")
-        else:
-            print("BROKEN")
+        try:
+            resp = requests.head(link, timeout=2)
+            if resp.status_code == http.HTTPStatus.OK:
+                print("OK")
+            else:
+                print("BROKEN")
+                broken.append(link)
+        except:
+            print("TIMEOUT")
             broken.append(link)
 
     if len(broken) > 0:
