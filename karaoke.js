@@ -25,7 +25,7 @@ var keys_to_begin = [13, 27, 33, 34]; // Keys: Keyboard Return, Clicker Play, Cl
 var topics = ['random', 'jayz', 'cats'];
 var slides = [];
 var slides_per_show = 5;
-var secs_per_slide = 15;
+var secs_per_slide = 12;
 
 var local_images = window["jayz_images"];
 
@@ -53,32 +53,51 @@ function shuffle(a) {
 function showSplash() {
     $("#content").html("<div class='container'>" +
         "<div class='jumbotron'>" +
-        "  <h1>Ignite Karaoke</h1>" +
-        "  <p class='lead'>An Ignite talk is a 5-minute talk format "+
-        "    consisting of 20 slides that <em>auto-advance</em> every "+
-        "    15 seconds. Can you give a 5-slide Ignite talk <b>when you "+
-        "    haven't seen the slides before?</b>" +
+        "  <h1>Stand & Deliver: Presentation Karaoke</h1>" +
+        "  <p class='lead'>I just need 1 minute of your time! "+
+        "    LITERALLY ... 1 MINUTE "+
+        "    Talk about any subject for 1 minute while "+
+        "    the images on the screen change every 12 seconds!" +
+        "  <br><br><br>" +
+        "  Tell YOUR story, with help from..." +
         "  </p>" +
-        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"random\");'>Go!</a></p>" +
-        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"jayz\");'>Jay-Z</a></p>" +
-        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"cats\");'>Cats!</a></p>" +
-        "  <p><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"baseball\");'>Baseball!</a></p>" +
+        "  <br><br><br>" +
+        "  <tr>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"random\");'>Go!</a></td>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"jayz\");'>Jay-Z</a></td>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"cats\");'>Cats!</a></td>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"baseball\");'>Baseball!</a></td>" +
+        "  </tr><tr>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"pigs\");'>Pigs!</a></td>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"horses\");'>Horses!</a></td>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"pokemon\");'>Pokemon!</a></td>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"minions\");'>Minions!</a></td>" +
+        "  </tr><tr>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"dreamworks\");'>Dreamworks!</a></td>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"wrestling\");'>Wrestling!</a></td>" +
+        "  <td><a class='btn btn-lg btn-success' href='#' role='button' onClick='launchIgnite(\"dogs\");'>Dogs!</a></td>" +
+        "  <td></td>" +
+        "  </tr>" +
         "</div></div>" +
         "<div class='ignitelogo'></div>");
 };
 
 function showSlide(urls) {
     if (urls.length == 0) {
+		window.location.replace('karaoke.html');
+		local_images = null;
         showSplash();
         return;
     }
     var url = urls.pop();
-    $("#content").html("<div class='slide'><img src='" + url + "'/></div>" +
+    $("#content").html("<div class='relative-container'><div class='blur'><img src='" + url + "'/></div><div class='slide'><img src='" + url + "'/></div></div>" +
 		"<div class='ignitelogo'></div>");
     var imgWidth = $(".slide img").width();
     var imgHeight = $(".slide img").height();
     var slideWidth = $(window).width();
     var slideHeight = $(window).height();
+    $(".blur img").height(slideHeight);
+    $(".blur img").width(slideWidth);
     if (imgHeight >= imgWidth) {
         $(".slide img").addClass("portrait");
         $(".slide img").height(slideHeight);

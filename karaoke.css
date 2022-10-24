@@ -22,7 +22,7 @@
  */
 @media (min-width: 768px) {
   .container {
-    max-width: 730px;
+    max-width: 830px;
   }
 }
 .container-narrow > hr {
@@ -40,8 +40,18 @@
   font-size: 21px;
 }
 .slide {
+  position: absolute;
   width: 100%;
   height: 100%;
+}
+.relative-container {
+  position: relative;
+}
+.blur {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(25px);
 }
 .portrait {
     width: auto;
